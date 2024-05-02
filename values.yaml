@@ -1,0 +1,23 @@
+replicaCount: 3
+
+image:
+  repository: gek62/test-task-project
+  pullPolicy: IfNotPresent
+
+service:
+  name: http
+  type: NodePort
+  externalPort: 80
+  internalPort: 3000
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+message: 'Hello to my test project!'
+
+
